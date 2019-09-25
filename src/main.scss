@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$board-height: 500px;
+$board-width: 400px;
+$display-height: 100px;
+$button-width: $board-width / 4;
+$menu-button-width: $board-width / 3;
+$button-height: round(($board-height - $display-height) / 5);
+
+html,
+body,
+#main {
+    height: 100%;
+}
+body{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.calculator_area {
+    height: $board-height;
+    width: $board-width;
+}
+
+.display {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: $display-height;
+    text-align: right;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.board{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.button_light{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    width: $button-width;
+    color: #000;
+    height: $button-height;
+    background-color: #f0f0f0;
+    &:active{
+        background-color: #b8b8b8;
+    }
+}
+
+.button_dark{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    width: $button-width;
+    color: #fff;
+    height: $button-height;
+    background-color: #666;
+    &:active{
+        background-color: #b8b8b8;
+    }
+}
+
+.menu_button{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    width: $menu-button-width;
+    color: #000;
+    height: 50px;
+    background-color: #e4e4e4;
+    &:active{
+        background-color: #b8b8b8;
+    }
+}
+
+.toggle_menu_button_light{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    width: 2*$menu-button-width;
+    color: #000;
+    height: 50px;
+    background-color: #f0f0f0;
+}
+
+.toggle_menu_button_dark{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 0;
+    margin: 0;
+    width: 2*$menu-button-width;
+    color: #fff;
+    height: 50px;
+    background-color: #666;
+}
+
+.calculator_value{
+    position: absolute;
+    font-size: 80px;
+    padding: 0 15px 0 15px;
+    right: 0;
+    transform-origin: right;
+    display: inline-block;
+}
+
+.react-switch {
+    margin-left: 4px;
+  }
+
+.menu{
+    text-align:center;
+}
+
+.rows {
+    display: inline-block;
+ }
